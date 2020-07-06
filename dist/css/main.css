@@ -134,4 +134,201 @@ table {
 	border-spacing: 0;
 }
 
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Zilla Slab', serif;
+	letter-spacing: 0.03em;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 0.8rem;
+}
+
+p {
+	line-height: 2em;
+	font-family: 'Montserrat', serif;
+}
+
+ul,
+ol,
+a {
+	line-height: 2em;
+	font-family: 'Zilla Slab', serif;
+}
+
+ol li {
+	list-style: decimal;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+span {
+	font-family: 'Zilla Slab', serif;
+}
+
+header {
+	padding: 30px;
+	flex-direction: column;
+	width: 100%;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+	header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+header nav ul {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+	header nav ul {
+		flex-direction: row;
+	}
+}
+
+header nav ul li {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+}
+
+header nav ul li a {
+	padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+	header nav ul li a {
+		flex-direction: row;
+		padding: 15px;
+	}
+}
+
+footer {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	flex-direction: column;
+	padding: 30px;
+}
+
+@media screen and (min-width: 768px) {
+	footer {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+}
+
+footer .social {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: black;
+}
+
+@media screen and (min-width: 768px) {
+	footer .social {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+footer .social h2 {
+	font-size: 1.5rem;
+	padding: 15px;
+}
+
+footer .social ul {
+	display: flex;
+	flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+	footer .social ul {
+		flex-direction: row;
+	}
+}
+
+footer .social ul li {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	justify-content: start;
+	font-size: 1.5rem;
+}
+
+footer .social ul li a {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+	footer .social ul li a {
+		flex-direction: row;
+		padding: 15px;
+	}
+}
+
+footer .social ul li a img {
+	width: 32px;
+}
+
+footer .social ul li a span {
+	padding-left: 10px;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -69,18 +69,14 @@ span {
 }
 
 header {
-	background: $secondary-color;
 	padding: $standard-spacing;
-	display: flex;
+	// display: flex;
 	flex-direction: column;
 	width: 100%;
 	@include flex-center;
 	@include bp-med {
 		flex-direction: row;
 		justify-content: space-between;
-		background: rgba(38, 38, 38, 0.7);
-		position: absolute;
-		z-index: 1;
 	}
 	nav {
 		ul {
@@ -107,54 +103,50 @@ header {
 
 footer {
 	@include flex-center;
+	width: 100%;
 	flex-direction: column;
-	background: $secondary-color;
 	padding: $standard-spacing;
 	@include bp-med {
 		flex-direction: row;
 		justify-content: space-evenly;
 	}
-	.hours {
-		@include flex-center;
-		flex-direction: column;
-		color: white;
-		padding-bottom: 40px;
 
-		h1 {
-			font-size: 1.5rem;
-			padding: 15px;
-		}
-		ul {
-			@include flex-center;
-			flex-direction: column;
-			li {
-				font-size: 1.1rem;
-				width: 100%;
-				display: flex;
-				span {
-					font-size: 1.4rem;
-					flex-grow: 1;
-					text-align: right;
-					margin-right: 10px;
-				}
-			}
-		}
-	}
 	.social {
 		@include flex-center;
 		flex-direction: column;
-		color: white;
-		h1 {
+		color: black;
+		@include bp-med {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		h2 {
 			font-size: 1.5rem;
 			padding: 15px;
 		}
 		ul {
-			@include flex-center;
+			display: flex;
 			flex-direction: column;
+			@include bp-med {
+				flex-direction: row;
+			}
 			li {
-				font-size: 1.1rem;
+				@include flex-center;
+				justify-content: start;
+				font-size: 1.5rem;
+
 				a {
-					font-size: 1.4rem;
+					@include flex-center;
+					padding: 10px;
+					@include bp-med {
+						flex-direction: row;
+						padding: 15px;
+					}
+					img {
+						width: 32px;
+					}
+					span {
+						padding-left: $small-spacing;
+					}
 				}
 			}
 		}
