@@ -1,0 +1,162 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Zilla Slab', serif;
+	letter-spacing: 0.03em;
+}
+
+h1 {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 2.2rem;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+h6 {
+	font-size: 0.8rem;
+}
+
+p {
+	line-height: 2em;
+	font-family: 'Montserrat', serif;
+}
+ul,
+ol,
+a {
+	line-height: 2em;
+	font-family: 'Zilla Slab', serif;
+}
+
+ol {
+	li {
+		list-style: decimal;
+	}
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+span {
+	font-family: 'Zilla Slab', serif;
+}
+
+header {
+	background: $secondary-color;
+	padding: $standard-spacing;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	@include flex-center;
+	@include bp-med {
+		flex-direction: row;
+		justify-content: space-between;
+		background: rgba(38, 38, 38, 0.7);
+		position: absolute;
+		z-index: 1;
+	}
+	nav {
+		ul {
+			display: flex;
+			flex-direction: column;
+			@include bp-med {
+				flex-direction: row;
+			}
+			li {
+				@include flex-center;
+				font-size: 1.5rem;
+
+				a {
+					padding: 10px;
+					@include bp-med {
+						flex-direction: row;
+						padding: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	@include flex-center;
+	flex-direction: column;
+	background: $secondary-color;
+	padding: $standard-spacing;
+	@include bp-med {
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+	.hours {
+		@include flex-center;
+		flex-direction: column;
+		color: white;
+		padding-bottom: 40px;
+
+		h1 {
+			font-size: 1.5rem;
+			padding: 15px;
+		}
+		ul {
+			@include flex-center;
+			flex-direction: column;
+			li {
+				font-size: 1.1rem;
+				width: 100%;
+				display: flex;
+				span {
+					font-size: 1.4rem;
+					flex-grow: 1;
+					text-align: right;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+	.social {
+		@include flex-center;
+		flex-direction: column;
+		color: white;
+		h1 {
+			font-size: 1.5rem;
+			padding: 15px;
+		}
+		ul {
+			@include flex-center;
+			flex-direction: column;
+			li {
+				font-size: 1.1rem;
+				a {
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
+}
