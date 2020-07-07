@@ -13,9 +13,13 @@
 		padding: $small-spacing;
 		img {
 			width: 350px;
-			margin: $small-spacing;
+			margin-bottom: $large-spacing;
+			@include bp-med {
+				margin-right: $large-spacing;
+			}
 		}
-		div {
+		.info {
+			margin-bottom: $large-spacing;
 			h2 {
 				padding-bottom: $small-spacing;
 			}
@@ -31,16 +35,18 @@
 	.sponsor {
 		@include flex-center;
 		flex-direction: column;
-		// flex-grow: 1;
+		margin-bottom: $large-spacing;
 		h2 {
-			padding: $small-spacing;
+			padding-bottom: $small-spacing;
 		}
 	}
 	.pricing {
 		@include flex-center;
 		flex-direction: column;
+		margin-bottom: $large-spacing;
 		h2 {
 			font-weight: normal;
+			padding-bottom: $small-spacing;
 		}
 	}
 }
