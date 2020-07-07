@@ -46,3 +46,11 @@ $breakpoint-desktop: 1024px;
 		@content;
 	}
 }
+
+@mixin header-font {
+	font-family: 'Poppins', sans-serif;
+}
+
+@mixin non-header-fonts {
+	font-family: 'Heebo', sans-serif;
+}

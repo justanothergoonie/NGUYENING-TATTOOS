@@ -145,7 +145,7 @@ body {
 }
 
 .wrapper {
-	min-height: 100vh;
+	min-height: 85vh;
 	overflow: hidden;
 	display: block;
 }
@@ -156,7 +156,6 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Zilla Slab', serif;
 	letter-spacing: 0.03em;
 }
 
@@ -166,12 +165,12 @@ h1 {
 }
 
 h2 {
-	font-size: 2.2rem;
+	font-size: 1.5rem;
 	font-weight: bold;
 }
 
 h3 {
-	font-size: 1.8rem;
+	font-size: 1rem;
 }
 
 h4 {
@@ -265,7 +264,6 @@ header nav ul li a {
 	justify-content: center;
 	width: 100%;
 	flex-direction: column;
-	position: absolute;
 	bottom: 0;
 	width: 100%;
 	height: 150px;
@@ -276,10 +274,6 @@ header nav ul li a {
 		flex-direction: row;
 		justify-content: space-evenly;
 	}
-}
-
-.social-section.push {
-	height: 142px;
 }
 
 .social-section .social {
@@ -351,16 +345,58 @@ header nav ul li a {
 	padding: 10px;
 }
 
-@media screen and (min-width: 768px) {
-	.artist {
-		flex-direction: row;
-	}
-}
-
 .artist .about-them {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	text-align: center;
 	max-width: 75%;
 	padding: 10px;
+}
+
+.artist .about-them img {
+	width: 350px;
+	margin: 10px;
+}
+
+.artist .about-them div h2 {
+	padding-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+	.artist .about-them {
+		flex-direction: row;
+		max-width: 100%;
+	}
+	.artist .about-them div {
+		max-width: 65%;
+	}
+}
+
+.artist .sponsor {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.artist .sponsor h2 {
+	padding: 10px;
+}
+
+.artist .pricing {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.artist .pricing h2 {
+	font-weight: normal;
 }
 
 /*# sourceMappingURL=main.css.map */

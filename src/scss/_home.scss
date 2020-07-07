@@ -3,11 +3,44 @@
 	flex-direction: column;
 	padding: $small-spacing;
 	@include bp-med {
-		flex-direction: row;
+		// flex-direction: row;
 	}
 	.about-them {
+		@include flex-center;
+		flex-direction: column;
 		text-align: center;
 		max-width: 75%;
 		padding: $small-spacing;
+		img {
+			width: 350px;
+			margin: $small-spacing;
+		}
+		div {
+			h2 {
+				padding-bottom: $small-spacing;
+			}
+		}
+		@include bp-med {
+			flex-direction: row;
+			max-width: 100%;
+			div {
+				max-width: 65%;
+			}
+		}
+	}
+	.sponsor {
+		@include flex-center;
+		flex-direction: column;
+		// flex-grow: 1;
+		h2 {
+			padding: $small-spacing;
+		}
+	}
+	.pricing {
+		@include flex-center;
+		flex-direction: column;
+		h2 {
+			font-weight: normal;
+		}
 	}
 }
