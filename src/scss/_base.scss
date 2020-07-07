@@ -69,6 +69,9 @@ a {
 	color: black;
 	text-decoration: none;
 }
+.active {
+	border-bottom: 1px solid black;
+}
 
 span {
 	@include non-header-fonts;
