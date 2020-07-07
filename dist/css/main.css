@@ -136,10 +136,18 @@ table {
 
 * {
 	box-sizing: border-box;
+	margin: 0;
 }
 
 body {
 	font-family: 'Lato', sans-serif;
+	height: 100%;
+}
+
+.wrapper {
+	min-height: 100vh;
+	overflow: hidden;
+	display: block;
 }
 
 h1,
@@ -204,7 +212,7 @@ span {
 }
 
 header {
-	padding: 30px;
+	padding: 10px;
 	flex-direction: column;
 	width: 100%;
 	display: flex;
@@ -250,24 +258,31 @@ header nav ul li a {
 	}
 }
 
-footer {
+.social-section {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 	flex-direction: column;
-	padding: 30px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 150px;
 }
 
 @media screen and (min-width: 768px) {
-	footer {
+	.social-section {
 		flex-direction: row;
 		justify-content: space-evenly;
 	}
 }
 
-footer .social {
+.social-section.push {
+	height: 142px;
+}
+
+.social-section .social {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -277,38 +292,34 @@ footer .social {
 }
 
 @media screen and (min-width: 768px) {
-	footer .social {
-		flex-direction: row;
+	.social-section .social {
 		justify-content: space-between;
 	}
 }
 
-footer .social h2 {
-	font-size: 1.5rem;
+.social-section .social h2 {
+	font-size: 1.3rem;
 	padding: 15px;
 }
 
-footer .social ul {
+.social-section .social h3 {
+	font-size: 1.5rem;
+}
+
+.social-section .social ul {
 	display: flex;
-	flex-direction: column;
+	padding: 10px;
 }
 
-@media screen and (min-width: 768px) {
-	footer .social ul {
-		flex-direction: row;
-	}
-}
-
-footer .social ul li {
+.social-section .social ul li {
 	display: flex;
 	align-content: center;
 	align-items: center;
 	justify-content: center;
-	justify-content: start;
 	font-size: 1.5rem;
 }
 
-footer .social ul li a {
+.social-section .social ul li a {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -317,18 +328,39 @@ footer .social ul li a {
 }
 
 @media screen and (min-width: 768px) {
-	footer .social ul li a {
+	.social-section .social ul li a {
 		flex-direction: row;
 		padding: 15px;
 	}
 }
 
-footer .social ul li a img {
+.social-section .social ul li a img {
 	width: 32px;
 }
 
-footer .social ul li a span {
+.social-section .social ul li a span {
 	padding-left: 10px;
+}
+
+.artist {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+	.artist {
+		flex-direction: row;
+	}
+}
+
+.artist .about-them {
+	text-align: center;
+	max-width: 75%;
+	padding: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
