@@ -1,3 +1,7 @@
 console.log(`Hello World from main.js! 
 Change this message, and make sure it changes in the browser 
-to verify that you're working in the right files.`)
+to verify that you're working in the right files.`);
+
+$(window).load(function () {
+	$('.loader').fadeOut('slow');
+});
