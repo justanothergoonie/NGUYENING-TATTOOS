@@ -5,3 +5,5 @@ to verify that you're working in the right files.`);
 $(window).load(function () {
 	$('.loader').fadeOut('slow');
 });
+
+// birthday dropdown

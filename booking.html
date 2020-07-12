@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge" />
+		<title>Daniel Nguyen Tattoos - About</title>
+		<meta
+			name="description"
+			content="Daniel Nguyen specializes in Black and Grey as well as Anime/Otaku Tattoos"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="dist/css/main.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Heebo&family=Poppins:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="loader"></div>
+
+			<header>
+				<h1>Nguyen Tattoos</h1>
+				<nav>
+					<ul>
+						<li>
+							<a href="index.html">
+								<span>About</span>
+							</a>
+						</li>
+						<li>
+							<a href="work.html"> <span>Work</span> </a>
+						</li>
+						<li>
+							<a href="booking.html">
+								<span class="active">Book</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<section class="booking">
+				<legend>About You</legend>
+				<form action="">
+					<fieldset id="name-please">
+						<h2>Whats your name?</h2>
+						<label for="first-name">First Name:</label>
+						<input
+							type="text"
+							name="formfield"
+							id="first-name"
+							placeholder="First Name"
+							aria-placeholder="First Name"
+						/>
+						<label for="last-name">Last Name:</label>
+						<input
+							type="text"
+							name="formfield"
+							id="last-name"
+							placeholder="Last Name"
+							aria-placeholder="Last Name"
+						/>
+					</fieldset>
+					<!-- </form> -->
+					<h2>Are You Over 18 Years of Age?</h2>
+					<fieldset id="radio">
+						<label for="yes">Yes</label>
+						<input
+							type="radio"
+							name="controller"
+							id="yes"
+							checked
+							required
+							aria-checked="true"
+						/>
+						<label for="no">No</label>
+						<input
+							type="radio"
+							name="controller"
+							id="no"
+							required
+							aria-required="true"
+						/>
+					</fieldset>
+					<h2>Date Of Birth</h2>
+					<!-- <form action=""> -->
+
+					<fieldset id="birthday-please">
+						<label for="day">Day</label>
+						<select
+							type="dropdown"
+							name="numerical-dropdown"
+							id="day"
+							placeholder="01"
+							aria-placeholder="01"
+						>
+							<option value="01" aria-placeholder="01">
+								01
+							</option>
+						</select>
+						<label for="month">Month</label>
+						<select
+							type="dropdown"
+							name="text-dropdown"
+							id="month"
+							placeholder="Jan"
+							aria-placeholder="Month"
+						>
+							<option value="Jan" aria-placeholder="January">
+								Jan
+							</option>
+						</select>
+						<label for="Year">Year</label>
+						<select
+							type="numerical-dropdown"
+							name="year-dropdown"
+							id="year"
+							min="2002"
+							placeholder="2002"
+							aria-placeholder="2002"
+						>
+							<option value="2002" aria-placeholder="2002">
+								2002
+							</option>
+						</select>
+					</fieldset>
+					<!-- </form> -->
+					<h2>Whats your tattoo idea?</h2>
+					<!-- <form action=""> -->
+					<label for="concept"></label>
+					<textarea
+						name="idea"
+						id="concept"
+						cols="30"
+						rows="10"
+					></textarea>
+					<!-- </form> -->
+					<!-- <legend>What Is Your Email</legend> -->
+					<!-- <form action=""> -->
+
+					<label for="email">Email Address</label>
+					<input
+						type="email"
+						name="formfield"
+						id="email"
+						placeholder="Valid Email Address"
+						aria-placeholder="Valid Email Address"
+					/>
+
+					<label for="booking-date">
+						When are you trying to schedule your tattoo?</label
+					>
+					<input type="date" id="booking-date" name="calender" />
+				</form>
+				<button type="submit">Submit</button>
+			</section>
+		</div>
+
+		<footer class="social-section">
+			<div class="social">
+				<!-- <h2>SOCIAL</h2> -->
+				<h3>&commat;nguyentattoos</h3>
+				<ul>
+					<li>
+						<a
+							href="https://www.instagram.com/nguyentattoos/?hl=en"
+						>
+							<img
+								src="./dist/img/instagram.png"
+								alt="Instagram logo"
+							/>
+							<!-- <span>Instagram</span> -->
+						</a>
+					</li>
+					<li>
+						<a href="facebook.com/nguyentattoos">
+							<img
+								src="./dist/img/facebook.png"
+								alt="facebook logo"
+							/>
+							<!-- <span>Facebook</span> -->
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/nguyentattoos/media">
+							<img
+								src="./dist/img/twitter.png"
+								alt="Twitter logo"
+							/>
+							<!-- <span>Twitter</span> -->
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="dist/js/main.js"></script>
+	</body>
+</html>
