@@ -416,6 +416,10 @@ header nav ul li a {
 	padding-bottom: 10px;
 }
 
+.artist .about-them .info .book {
+	padding: 10px;
+}
+
 @media screen and (min-width: 768px) {
 	.artist .about-them {
 		flex-direction: row;

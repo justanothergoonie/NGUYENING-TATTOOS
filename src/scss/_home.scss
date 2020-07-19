@@ -51,6 +51,10 @@
 					padding-bottom: $small-spacing;
 				}
 			}
+			.book {
+				padding: $small-spacing;
+				// background-color: blueviolet;
+			}
 		}
 		@include bp-med {
 			flex-direction: row;
