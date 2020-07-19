@@ -84,3 +84,15 @@
 		rgb(249, 249, 249);
 	opacity: 0.8;
 }
+
+.booking {
+	@include flex-center;
+	form {
+		@include flex-center;
+		flex-direction: column;
+	}
+	.booking-date {
+		display: flex;
+		flex-direction: column;
+	}
+}

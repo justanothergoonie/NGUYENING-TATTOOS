@@ -451,4 +451,24 @@ header nav ul li a {
 	opacity: 0.8;
 }
 
+.booking {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.booking form {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.booking .booking-date {
+	display: flex;
+	flex-direction: column;
+}
+
 /*# sourceMappingURL=main.css.map */

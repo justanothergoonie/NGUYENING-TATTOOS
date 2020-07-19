@@ -42,52 +42,55 @@
 			</header>
 
 			<section class="booking">
-				<legend>About You</legend>
 				<form action="">
+					<h2>About You</h2>
 					<fieldset id="name-please">
-						<h2>Whats your name?</h2>
-						<label for="first-name">First Name:</label>
-						<input
-							type="text"
-							name="formfield"
-							id="first-name"
-							placeholder="First Name"
-							aria-placeholder="First Name"
-						/>
-						<label for="last-name">Last Name:</label>
-						<input
-							type="text"
-							name="formfield"
-							id="last-name"
-							placeholder="Last Name"
-							aria-placeholder="Last Name"
-						/>
+						<legend>Whats Your Name?</legend>
+
+						<div>
+							<label for="first-name">First:</label>
+							<input
+								type="text"
+								name="formfield"
+								id="first-name"
+								placeholder="First Name"
+								aria-placeholder="First Name"
+							/>
+
+							<label for="last-name">Last:</label>
+							<input
+								type="text"
+								name="formfield"
+								id="last-name"
+								placeholder="Last Name"
+								aria-placeholder="Last Name"
+							/>
+						</div>
 					</fieldset>
-					<!-- </form> -->
-					<h2>Are You Over 18 Years of Age?</h2>
+
 					<fieldset id="radio">
+						<legend>Are You Over 18 Years of Age?</legend>
 						<label for="yes">Yes</label>
 						<input
 							type="radio"
 							name="controller"
+							value="yes"
 							id="yes"
-							checked
 							required
-							aria-checked="true"
 						/>
 						<label for="no">No</label>
 						<input
 							type="radio"
 							name="controller"
+							value="no"
 							id="no"
 							required
-							aria-required="true"
 						/>
 					</fieldset>
-					<h2>Date Of Birth</h2>
-					<!-- <form action=""> -->
 
 					<fieldset id="birthday-please">
+						<legend>Date Of Birth</legend>
+
 						<label for="day">Day</label>
 						<select
 							type="dropdown"
@@ -126,19 +129,13 @@
 							</option>
 						</select>
 					</fieldset>
-					<!-- </form> -->
-					<h2>Whats your tattoo idea?</h2>
-					<!-- <form action=""> -->
-					<label for="concept"></label>
-					<textarea
-						name="idea"
-						id="concept"
-						cols="30"
-						rows="10"
-					></textarea>
-					<!-- </form> -->
-					<!-- <legend>What Is Your Email</legend> -->
-					<!-- <form action=""> -->
+
+					<fieldset class="concept">
+						<legend>Whats your tattoo idea?</legend>
+						<label for="concept"></label>
+						<textarea name="idea" id="concept" cols="30" rows="10">
+						</textarea>
+					</fieldset>
 
 					<label for="email">Email Address</label>
 					<input
@@ -147,14 +144,19 @@
 						id="email"
 						placeholder="Valid Email Address"
 						aria-placeholder="Valid Email Address"
+						aria-required="true"
+						required
 					/>
 
-					<label for="booking-date">
-						When are you trying to schedule your tattoo?</label
-					>
-					<input type="date" id="booking-date" name="calender" />
+					<fieldset class="booking-date">
+						<label for="booking-date">
+							When are you trying to schedule your tattoo?
+						</label>
+						<input type="date" id="booking-date" name="calender" />
+					</fieldset>
+
+					<button type="submit">Submit</button>
 				</form>
-				<button type="submit">Submit</button>
 			</section>
 		</div>
 
