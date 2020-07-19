@@ -87,12 +87,21 @@
 
 .booking {
 	@include flex-center;
-	form {
-		@include flex-center;
-		flex-direction: column;
+	padding: $large-spacing 0;
+	h2 {
+		padding: $large-spacing 0;
 	}
-	.booking-date {
-		display: flex;
-		flex-direction: column;
+
+	fieldset {
+		// display: flex;
+		// flex-direction: column;
+		padding: $small-spacing 0;
+		label {
+			padding-bottom: $small-spacing;
+		}
+		&.booking-date {
+			display: flex;
+			flex-direction: column;
+		}
 	}
 }

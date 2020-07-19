@@ -456,17 +456,22 @@ header nav ul li a {
 	align-content: center;
 	align-items: center;
 	justify-content: center;
+	padding: 30px 0;
 }
 
-.booking form {
-	display: flex;
-	align-content: center;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+.booking h2 {
+	padding: 30px 0;
 }
 
-.booking .booking-date {
+.booking fieldset {
+	padding: 10px 0;
+}
+
+.booking fieldset label {
+	padding-bottom: 10px;
+}
+
+.booking fieldset.booking-date {
 	display: flex;
 	flex-direction: column;
 }
