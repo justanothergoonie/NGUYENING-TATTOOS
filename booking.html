@@ -47,24 +47,31 @@
 					<fieldset id="name-please">
 						<legend>Whats Your Name?</legend>
 
-						<div>
-							<label for="first-name">First:</label>
-							<input
-								type="text"
-								name="formfield"
-								id="first-name"
-								placeholder="First Name"
-								aria-placeholder="First Name"
-							/>
-
-							<label for="last-name">Last:</label>
-							<input
-								type="text"
-								name="formfield"
-								id="last-name"
-								placeholder="Last Name"
-								aria-placeholder="Last Name"
-							/>
+						<div class="full-name-container">
+							<div class="name-container">
+								<label for="first-name">First Name:</label>
+								<input
+									type="text"
+									name="formfield"
+									id="first-name"
+									placeholder="First Name"
+									required
+									aria-required="true"
+									aria-placeholder="First Name"
+								/>
+							</div>
+							<div class="name-container">
+								<label for="last-name">Last Name:</label>
+								<input
+									type="text"
+									name="formfield"
+									id="last-name"
+									placeholder="Last Name"
+									required
+									aria-required="true"
+									aria-placeholder="Last Name"
+								/>
+							</div>
 						</div>
 					</fieldset>
 
@@ -113,7 +120,7 @@
 							placeholder="Jan"
 							aria-placeholder="Month"
 						>
-							<option value="Jan" aria-placeholder="January">
+							<option value="January" aria-placeholder="January">
 								Jan
 							</option>
 						</select>
@@ -140,12 +147,14 @@
 							id="concept"
 							cols="30"
 							rows="10"
+							required
+							aria-required="true"
 							aria-placeholder="Type your idea here"
 						>
 						</textarea>
 					</fieldset>
 
-					<label for="email">Email Address</label>
+					<label for="email">Email Address:</label>
 					<input
 						type="email"
 						name="formfield"

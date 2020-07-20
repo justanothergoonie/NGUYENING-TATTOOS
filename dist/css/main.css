@@ -471,6 +471,10 @@ header nav ul li a {
 	padding: 10px 0;
 }
 
+.booking fieldset legend {
+	font-weight: bold;
+}
+
 .booking fieldset label {
 	padding-bottom: 10px;
 }
@@ -478,6 +482,20 @@ header nav ul li a {
 .booking fieldset.booking-date {
 	display: flex;
 	flex-direction: column;
+}
+
+.booking fieldset#name-please .full-name-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.booking fieldset#name-please .full-name-container .name-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.booking fieldset#name-please .full-name-container .name-container label {
+	padding: 5px 5px 5px 0px;
 }
 
 /*# sourceMappingURL=main.css.map */

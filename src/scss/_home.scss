@@ -97,8 +97,9 @@
 	}
 
 	fieldset {
-		// display: flex;
-		// flex-direction: column;
+		legend {
+			font-weight: bold;
+		}
 		padding: $small-spacing 0;
 		label {
 			padding-bottom: $small-spacing;
@@ -106,6 +107,19 @@
 		&.booking-date {
 			display: flex;
 			flex-direction: column;
+		}
+		&#name-please {
+			.full-name-container {
+				display: flex;
+				flex-direction: column;
+				.name-container {
+					display: flex;
+					flex-direction: row;
+					label {
+						padding: 5px 5px 5px 0px;
+					}
+				}
+			}
 		}
 	}
 }

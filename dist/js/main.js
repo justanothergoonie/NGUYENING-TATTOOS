@@ -6,10 +6,10 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-console.log("Hello World from main.js! \nChange this message, and make sure it changes in the browser \nto verify that you're working in the right files.");
+//loading image
 $(window).load(function () {
   $('.loader').fadeOut('slow');
-}); //Are you 18? if not why are you here
+}); //Are you 18? if not why are you here?
 
 var birthday = document.querySelector('#birthday-please');
 var radioBtns = document.querySelectorAll('input[type="radio"]');
@@ -27,8 +27,7 @@ try {
         birthday.style.display = '';
       }
     });
-  } // birthday dropdown
-
+  }
 } catch (err) {
   _iterator.e(err);
 } finally {
