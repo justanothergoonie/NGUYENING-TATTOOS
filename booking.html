@@ -77,6 +77,7 @@
 							value="yes"
 							id="yes"
 							required
+							aria-required="true"
 						/>
 						<label for="no">No</label>
 						<input
@@ -85,6 +86,7 @@
 							value="no"
 							id="no"
 							required
+							aria-required="true"
 						/>
 					</fieldset>
 
@@ -133,7 +135,13 @@
 					<fieldset class="concept">
 						<legend>Whats your tattoo idea?</legend>
 						<label for="concept"></label>
-						<textarea name="idea" id="concept" cols="30" rows="10">
+						<textarea
+							name="idea"
+							id="concept"
+							cols="30"
+							rows="10"
+							aria-placeholder="Type your idea here"
+						>
 						</textarea>
 					</fieldset>
 
@@ -152,7 +160,13 @@
 						<label for="booking-date">
 							When are you trying to schedule your tattoo?
 						</label>
-						<input type="date" id="booking-date" name="calender" />
+						<input
+							type="date"
+							id="booking-date"
+							name="calender"
+							required
+							aria-required="true"
+						/>
 					</fieldset>
 
 					<button type="submit">Submit</button>
