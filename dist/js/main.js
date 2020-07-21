@@ -27,10 +27,55 @@ try {
         birthday.style.display = '';
       }
     });
-  }
+  } //birthday dropdown
+
 } catch (err) {
   _iterator.e(err);
 } finally {
   _iterator.f();
+}
+
+var dayDrop = document.querySelector('#day');
+var d = 1;
+
+while (d <= 31) {
+  var days = document.createElement('option');
+  days.setAttribute('value', d);
+  days.setAttribute('placeholder', d);
+  days.setAttribute('required', '');
+  days.setAttribute('aria-required', 'true');
+  days.setAttribute('aria-placeholder', d);
+  dayDrop.appendChild(days);
+  days.innerText = d;
+  d++;
+}
+
+var yearDrop = document.querySelector('#year');
+var y = 2002;
+
+while (y >= 1920) {
+  var years = document.createElement('option');
+  years.setAttribute('value', y);
+  years.setAttribute('placeholder', y);
+  years.setAttribute('required', '');
+  years.setAttribute('aria-required', 'true');
+  years.setAttribute('aria-placeholder', y);
+  yearDrop.appendChild(years);
+  years.innerText = y;
+  y--;
+}
+
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+var monthDrop = document.querySelector('#month');
+
+for (var m in months) {
+  var month = document.createElement('option');
+  month.setAttribute('value', months[m]);
+  month.setAttribute('placeholder', months[m]);
+  month.setAttribute('aria-placeholder', months[m]);
+  month.setAttribute('required', '');
+  month.setAttribute('aria-required', 'true');
+  monthDrop.appendChild(month);
+  month.innerText = months[m];
 }
 //# sourceMappingURL=main.js.map

@@ -492,10 +492,15 @@ header nav ul li a {
 .booking fieldset#name-please .full-name-container .name-container {
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 5px;
 }
 
 .booking fieldset#name-please .full-name-container .name-container label {
 	padding: 5px 5px 5px 0px;
+}
+
+.booking fieldset#name-please .full-name-container .name-container input {
+	padding-left: 5px;
 }
 
 /*# sourceMappingURL=main.css.map */
