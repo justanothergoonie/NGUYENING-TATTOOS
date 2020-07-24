@@ -27,8 +27,8 @@ while (d <= 31) {
 	let days = document.createElement('option');
 	days.setAttribute('value', d);
 	days.setAttribute('placeholder', d);
-	days.setAttribute('required', '');
-	days.setAttribute('aria-required', 'true');
+	// days.setAttribute('required', '');
+	// days.setAttribute('aria-required', 'true');
 	days.setAttribute('aria-placeholder', d);
 	dayDrop.appendChild(days);
 	days.innerText = d;
@@ -42,8 +42,8 @@ while (y >= 1920) {
 	let years = document.createElement('option');
 	years.setAttribute('value', y);
 	years.setAttribute('placeholder', y);
-	years.setAttribute('required', '');
-	years.setAttribute('aria-required', 'true');
+	// years.setAttribute('required', '');
+	// years.setAttribute('aria-required', 'true');
 	years.setAttribute('aria-placeholder', y);
 	yearDrop.appendChild(years);
 	years.innerText = y;
@@ -72,8 +72,8 @@ for (let m in months) {
 	month.setAttribute('value', months[m]);
 	month.setAttribute('placeholder', months[m]);
 	month.setAttribute('aria-placeholder', months[m]);
-	month.setAttribute('required', '');
-	month.setAttribute('aria-required', 'true');
+	// month.setAttribute('required', '');
+	// month.setAttribute('aria-required', 'true');
 	monthDrop.appendChild(month);
 	month.innerText = months[m];
 }
