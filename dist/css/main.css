@@ -139,13 +139,24 @@ table {
 	margin: 0;
 }
 
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url("../../dist/img/loading.gif") 50% 50% no-repeat #f9f9f9;
+	opacity: 0.8;
+}
+
 body {
 	font-family: 'Lato', sans-serif;
 	height: 100%;
 }
 
 .wrapper {
-	min-height: 85vh;
+	min-height: 87vh;
 	overflow: hidden;
 	display: block;
 }
@@ -202,12 +213,12 @@ ol li {
 }
 
 a {
-	color: black;
+	color: #ffffff;
 	text-decoration: none;
 }
 
 .active {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #fff;
 }
 
 span {
@@ -251,6 +262,7 @@ header nav ul li {
 }
 
 header nav ul li a {
+	color: #fff;
 	padding: 10px;
 }
 
@@ -268,6 +280,7 @@ header nav ul li a {
 	justify-content: center;
 	width: 100%;
 	flex-direction: column;
+	background: rgba(0, 0, 0, 0.6);
 	bottom: 0;
 	width: 100%;
 	height: 130px;
@@ -286,7 +299,7 @@ header nav ul li a {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	color: black;
+	color: #fff;
 }
 
 @media screen and (min-width: 768px) {
@@ -297,6 +310,7 @@ header nav ul li a {
 
 .social-section .social h3 {
 	font-size: 1.3rem;
+	color: #fff;
 }
 
 .social-section .social ul {
@@ -335,7 +349,17 @@ header nav ul li a {
 	padding-left: 10px;
 }
 
-.artist {
+.index-body {
+	background-image: url(../../dist/img/background.png);
+	background-repeat: no-repeat;
+}
+
+.index-body .wrapper {
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+}
+
+.index-body .wrapper .artist {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -344,51 +368,51 @@ header nav ul li a {
 	padding: 10px;
 }
 
-.artist .about-them {
+.index-body .wrapper .artist .about-them {
 	display: flex;
 	flex-direction: column;
 	text-align: center;
 	padding: 10px;
 }
 
-.artist .about-them .dan3,
-.artist .about-them .dan2 {
+.index-body .wrapper .artist .about-them .dan3,
+.index-body .wrapper .artist .about-them .dan2 {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
-	.artist .about-them .dan3,
-	.artist .about-them .dan2 {
+	.index-body .wrapper .artist .about-them .dan3,
+	.index-body .wrapper .artist .about-them .dan2 {
 		display: block;
 	}
 }
 
-.artist .about-them .dan1,
-.artist .about-them .dan2,
-.artist .about-them .dan3 {
+.index-body .wrapper .artist .about-them .dan1,
+.index-body .wrapper .artist .about-them .dan2,
+.index-body .wrapper .artist .about-them .dan3 {
 	width: 350px;
 	margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
-	.artist .about-them .dan1,
-	.artist .about-them .dan2,
-	.artist .about-them .dan3 {
+	.index-body .wrapper .artist .about-them .dan1,
+	.index-body .wrapper .artist .about-them .dan2,
+	.index-body .wrapper .artist .about-them .dan3 {
 		margin-right: 30px;
 	}
 }
 
-.artist .about-them .info {
+.index-body .wrapper .artist .about-them .info {
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: column;
 }
 
-.artist .about-them .info h2 {
+.index-body .wrapper .artist .about-them .info h2 {
 	padding-bottom: 10px;
 }
 
-.artist .about-them .info .sponsor {
+.index-body .wrapper .artist .about-them .info .sponsor {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -397,11 +421,11 @@ header nav ul li a {
 	margin: 30px 0;
 }
 
-.artist .about-them .info .sponsor h2 {
+.index-body .wrapper .artist .about-them .info .sponsor h2 {
 	padding-bottom: 10px;
 }
 
-.artist .about-them .info .pricing {
+.index-body .wrapper .artist .about-them .info .pricing {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -410,51 +434,68 @@ header nav ul li a {
 	margin-bottom: 30px;
 }
 
-.artist .about-them .info .pricing h2 {
+.index-body .wrapper .artist .about-them .info .pricing h2 {
 	font-weight: normal;
 	padding-bottom: 10px;
 }
 
-.artist .about-them .info .book {
+.index-body .wrapper .artist .about-them .info .book {
 	padding: 10px;
+	background: rgba(185, 185, 185, 0.6);
+	color: #fff;
 }
 
 @media screen and (min-width: 768px) {
-	.artist .about-them {
+	.index-body .wrapper .artist .about-them {
 		flex-direction: row;
 		max-width: 100%;
 	}
 }
 
-.gallery {
+.work-body .background-holder {
+	background-image: url(../../dist/img/background.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.work-body .background-holder .work-header {
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+}
+
+.work-body .background-holder.footer {
+	background-position-y: 18%;
+}
+
+.work-body .gallery {
+	background: rgba(0, 0, 0, 0.6);
 	display: flex;
 	padding: 0 4px;
 }
 
-.gallery .column {
+.work-body .gallery .column {
 	flex: 33.333%;
 	max-width: 33.33%;
 	padding: 0 4px;
 }
 
-.gallery .column img {
+.work-body .gallery .column img {
 	vertical-align: middle;
 	width: 100%;
-	margin-top: 8px;
+	margin: 4px 0px;
 }
 
-.loader {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: url("../../dist/img/loading.gif") 50% 50% no-repeat #f9f9f9;
-	opacity: 0.8;
+.booking-body {
+	background-image: url(../../dist/img/background.png);
+	background-repeat: no-repeat;
 }
 
-.booking {
+.booking-body .wrapper {
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+}
+
+.booking-body .booking {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -462,44 +503,51 @@ header nav ul li a {
 	padding: 30px 0;
 }
 
-.booking h2 {
-	padding: 30px 0;
+.booking-body .booking form {
+	background: rgba(0, 0, 0, 0.6);
+	box-shadow: 0px 0px 40px 45px rgba(160, 160, 160, 0.7);
+	padding: 30px;
 }
 
-.booking fieldset {
+.booking-body .booking h2 {
+	padding-bottom: 30px;
+}
+
+.booking-body .booking fieldset {
 	padding: 10px 0;
 }
 
-.booking fieldset legend {
+.booking-body .booking fieldset legend {
 	font-weight: bold;
 }
 
-.booking fieldset label {
+.booking-body .booking fieldset label {
 	padding-bottom: 10px;
 }
 
-.booking fieldset.booking-date {
+.booking-body .booking fieldset.booking-date {
 	display: flex;
 	flex-direction: column;
 }
 
-.booking fieldset#name-please .full-name-container {
+.booking-body .booking fieldset#name-please .full-name-container {
 	display: flex;
 	flex-direction: column;
 }
 
-.booking fieldset#name-please .full-name-container .name-container {
+.booking-body .booking fieldset#name-please .full-name-container .name-container {
 	display: flex;
-	flex-direction: row;
-	margin-bottom: 5px;
+	align-items: center;
 }
 
-.booking fieldset#name-please .full-name-container .name-container label {
-	padding: 5px 5px 5px 0px;
+.booking-body .booking fieldset#name-please .full-name-container .name-container label {
+	padding-bottom: 10px;
+	width: 30%;
 }
 
-.booking fieldset#name-please .full-name-container .name-container input {
+.booking-body .booking fieldset#name-please .full-name-container .name-container input {
 	padding-left: 5px;
+	margin-bottom: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
