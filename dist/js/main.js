@@ -22,9 +22,9 @@ try {
     var button = _step.value;
     button.addEventListener('click', function () {
       if (this.value === 'no') {
-        birthday.style.display = 'none';
+        birthday.style.visibility = 'hidden';
       } else {
-        birthday.style.display = '';
+        birthday.style.visibility = '';
       }
     });
   } //birthday dropdown

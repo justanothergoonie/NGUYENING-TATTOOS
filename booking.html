@@ -43,13 +43,12 @@
 
 			<section class="booking">
 				<form action="">
-					<h2>About You</h2>
 					<fieldset id="name-please">
-						<legend>Whats Your Name?</legend>
-
+						<h2>About You</h2>
+						<h3>Whats Your Name?</h3>
 						<div class="full-name-container">
 							<div class="name-container">
-								<label for="first-name">First Name:</label>
+								<label for="first-name">First:</label>
 								<input
 									type="text"
 									name="formfield"
@@ -61,7 +60,7 @@
 								/>
 							</div>
 							<div class="name-container">
-								<label for="last-name">Last Name:</label>
+								<label for="last-name">Last:</label>
 								<input
 									type="text"
 									name="formfield"
@@ -74,68 +73,70 @@
 							</div>
 						</div>
 					</fieldset>
-
-					<fieldset id="radio">
-						<legend>Are You Over 18 Years of Age?</legend>
-						<label for="yes">Yes</label>
-						<input
-							type="radio"
-							name="controller"
-							value="yes"
-							id="yes"
-							required
-							checked
-							aria-checked="true"
-							aria-required="true"
-						/>
-						<label for="no">No</label>
-						<input
-							type="radio"
-							name="controller"
-							value="no"
-							id="no"
-						/>
-					</fieldset>
-
-					<fieldset id="birthday-please">
-						<legend>Date Of Birth</legend>
-
-						<label for="day">Day</label>
-						<select
-							type="dropdown"
-							name="numerical-dropdown"
-							id="day"
-							required
-							aria-required="true"
-						>
-						</select>
-						<label for="month">Month</label>
-						<select
-							type="dropdown"
-							name="text-dropdown"
-							id="month"
-							required
-							aria-required="true"
-						>
-						</select>
-						<label for="Year">Year</label>
-						<select
-							type="numerical-dropdown"
-							name="year-dropdown"
-							id="year"
-							required
-							aria-required="true"
-						>
-						</select>
-					</fieldset>
+					<div class="birthday">
+						<fieldset id="radio">
+							<h3>Are You 18 Years Old?</h3>
+							<label for="yes">Yes</label>
+							<input
+								type="radio"
+								name="controller"
+								value="yes"
+								id="yes"
+								required
+								checked
+								aria-checked="true"
+								aria-required="true"
+							/>
+							<label for="no">No</label>
+							<input
+								type="radio"
+								name="controller"
+								value="no"
+								id="no"
+							/>
+						</fieldset>
+						<fieldset id="birthday-please">
+							<h3>Date Of Birth</h3>
+							<div class="select day">
+								<label for="day">Day</label>
+								<select
+									type="dropdown"
+									name="numerical-dropdown"
+									id="day"
+									required
+									aria-required="true"
+								></select>
+							</div>
+							<div class="select month">
+								<label for="month">Month</label>
+								<select
+									type="dropdown"
+									name="text-dropdown"
+									id="month"
+									required
+									aria-required="true"
+								></select>
+							</div>
+							<div class="select year">
+								<label for="Year">Year</label>
+								<select
+									type="numerical-dropdown"
+									name="year-dropdown"
+									id="year"
+									required
+									aria-required="true"
+								></select>
+							</div>
+						</fieldset>
+					</div>
 
 					<fieldset class="concept">
-						<legend>Whats your tattoo idea?</legend>
+						<h3>Whats your tattoo idea?</h3>
 						<label for="concept"></label>
 						<textarea
 							name="idea"
 							id="concept"
-							cols="30"
+							cols="55"
 							rows="10"
 							required
 							aria-required="true"
@@ -143,79 +144,85 @@
 						>
 						</textarea>
 					</fieldset>
-
-					<label for="email">Email Address:</label>
-					<input
-						type="email"
-						name="formfield"
-						id="email"
-						placeholder="Valid Email Address"
-						aria-placeholder="Valid Email Address"
-						aria-required="true"
-						required
-					/>
-
-					<fieldset class="booking-date">
-						<label for="booking-date">
-							When are you trying to schedule your tattoo?
-						</label>
-						<input
-							type="date"
-							id="booking-date"
-							name="calender"
-							required
-							aria-required="true"
-						/>
-					</fieldset>
-
-					<button
-						type="submit"
-						role="button"
-						aria-roledescription="Submit button"
-					>
-						Submit
-					</button>
+					<div class="last-panel">
+						<div class="email-date">
+							<div class="email">
+								<label for="email">Email Address:</label>
+								<input
+									type="email"
+									name="formfield"
+									id="email"
+									placeholder="Valid Email Address"
+									aria-placeholder="Valid Email Address"
+									aria-required="true"
+									required
+								/>
+							</div>
+							<div class="submit">
+								<fieldset class="booking-date">
+									<label for="booking-date">
+										When are you trying to schedule your
+										tattoo?
+									</label>
+									<input
+										type="date"
+										id="booking-date"
+										name="calender"
+										required
+										aria-required="true"
+									/>
+								</fieldset>
+								<button
+									type="submit"
+									role="button"
+									aria-roledescription="Submit button"
+								>
+									Submit
+								</button>
+							</div>
+						</div>
+					</div>
 				</form>
 			</section>
+			<footer class="social-section">
+				<div class="social">
+					<!-- <h2>SOCIAL</h2> -->
+					<h3>&commat;nguyentattoos</h3>
+					<ul>
+						<li>
+							<a
+								href="https://www.instagram.com/nguyentattoos/?hl=en"
+							>
+								<img
+									src="./dist/img/instagram.png"
+									alt="Instagram logo"
+								/>
+								<!-- <span>Instagram</span> -->
+							</a>
+						</li>
+						<li>
+							<a href="facebook.com/nguyentattoos">
+								<img
+									src="./dist/img/facebook.png"
+									alt="facebook logo"
+								/>
+								<!-- <span>Facebook</span> -->
+							</a>
+						</li>
+						<li>
+							<a href="https://twitter.com/nguyentattoos/media">
+								<img
+									src="./dist/img/twitter.png"
+									alt="Twitter logo"
+								/>
+								<!-- <span>Twitter</span> -->
+							</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
 		</div>
 
-		<footer class="social-section">
-			<div class="social">
-				<!-- <h2>SOCIAL</h2> -->
-				<h3>&commat;nguyentattoos</h3>
-				<ul>
-					<li>
-						<a
-							href="https://www.instagram.com/nguyentattoos/?hl=en"
-						>
-							<img
-								src="./dist/img/instagram.png"
-								alt="Instagram logo"
-							/>
-							<!-- <span>Instagram</span> -->
-						</a>
-					</li>
-					<li>
-						<a href="facebook.com/nguyentattoos">
-							<img
-								src="./dist/img/facebook.png"
-								alt="facebook logo"
-							/>
-							<!-- <span>Facebook</span> -->
-						</a>
-					</li>
-					<li>
-						<a href="https://twitter.com/nguyentattoos/media">
-							<img
-								src="./dist/img/twitter.png"
-								alt="Twitter logo"
-							/>
-							<!-- <span>Twitter</span> -->
-						</a>
-					</li>
-				</ul>
-			</div>
-		</footer>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="dist/js/main.js"></script>
 	</body>

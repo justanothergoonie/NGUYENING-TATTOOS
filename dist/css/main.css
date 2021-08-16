@@ -139,6 +139,10 @@ table {
 	margin: 0;
 }
 
+html {
+	height: 100%;
+}
+
 .loader {
 	position: fixed;
 	left: 0px;
@@ -152,11 +156,13 @@ table {
 
 body {
 	font-family: 'Lato', sans-serif;
-	height: 100%;
+	margin: 0;
+	min-height: 100%;
 }
 
 .wrapper {
-	min-height: 87vh;
+	min-height: 90vh;
+	min-width: 100vw;
 	overflow: hidden;
 	display: block;
 }
@@ -272,6 +278,7 @@ header nav ul li {
 header nav ul li a {
 	color: #fff;
 	padding: 10px;
+	text-shadow: -2px -2px 0px #000000;
 }
 
 @media screen and (min-width: 768px) {
@@ -288,10 +295,9 @@ header nav ul li a {
 	justify-content: center;
 	width: 100%;
 	flex-direction: column;
-	background: rgba(0, 0, 0, 0.6);
 	bottom: 0;
 	width: 100%;
-	height: 130px;
+	height: 10vh;
 }
 
 @media screen and (min-width: 768px) {
@@ -369,59 +375,80 @@ header nav ul li a {
 
 .index-body .wrapper .artist {
 	display: flex;
-	align-content: center;
 	align-items: center;
-	justify-content: center;
 	flex-direction: column;
 	padding: 10px;
-}
-
-.index-body .wrapper .artist .about-them {
-	display: flex;
-	flex-direction: column;
 	text-align: center;
 	text-shadow: -2px -2px 0px #000000;
 	padding: 10px;
 }
 
-.index-body .wrapper .artist .about-them .dan3,
-.index-body .wrapper .artist .about-them .dan2 {
-	display: none;
-}
-
-@media screen and (min-width: 768px) {
-	.index-body .wrapper .artist .about-them .dan3,
-	.index-body .wrapper .artist .about-them .dan2 {
-		display: block;
+@media screen and (min-width: 1024px) {
+	.index-body .wrapper .artist {
+		flex-direction: row;
+		margin: 10% 2%;
 	}
 }
 
-.index-body .wrapper .artist .about-them .dan1,
-.index-body .wrapper .artist .about-them .dan2,
-.index-body .wrapper .artist .about-them .dan3 {
+.index-body .wrapper .artist .img-container .dan1,
+.index-body .wrapper .artist .img-container .dan2,
+.index-body .wrapper .artist .img-container .dan3 {
 	width: 350px;
 	margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
-	.index-body .wrapper .artist .about-them .dan1,
-	.index-body .wrapper .artist .about-them .dan2,
-	.index-body .wrapper .artist .about-them .dan3 {
+	.index-body .wrapper .artist .img-container .dan1,
+	.index-body .wrapper .artist .img-container .dan2,
+	.index-body .wrapper .artist .img-container .dan3 {
 		margin-right: 30px;
 	}
 }
 
-.index-body .wrapper .artist .about-them .info {
+.index-body .wrapper .artist .img-container .dan2,
+.index-body .wrapper .artist .img-container .dan3 {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.index-body .wrapper .artist .img-container .dan2,
+	.index-body .wrapper .artist .img-container .dan3 {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.index-body .wrapper .artist .img-container {
+		display: flex;
+		width: 60%;
+		justify-content: space-around;
+	}
+	.index-body .wrapper .artist .img-container .dan2 {
+		display: none;
+	}
+	.index-body .wrapper .artist .img-container .dan1,
+	.index-body .wrapper .artist .img-container .dan3 {
+		width: 45%;
+	}
+}
+
+.index-body .wrapper .artist .info {
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: column;
 }
 
-.index-body .wrapper .artist .about-them .info h2 {
+@media screen and (min-width: 1024px) {
+	.index-body .wrapper .artist .info {
+		width: 40%;
+	}
+}
+
+.index-body .wrapper .artist .info h2 {
 	padding-bottom: 10px;
 }
 
-.index-body .wrapper .artist .about-them .info .sponsor {
+.index-body .wrapper .artist .info .sponsor {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -430,11 +457,11 @@ header nav ul li a {
 	margin: 30px 0;
 }
 
-.index-body .wrapper .artist .about-them .info .sponsor h2 {
+.index-body .wrapper .artist .info .sponsor h2 {
 	padding-bottom: 10px;
 }
 
-.index-body .wrapper .artist .about-them .info .pricing {
+.index-body .wrapper .artist .info .pricing {
 	display: flex;
 	align-content: center;
 	align-items: center;
@@ -443,19 +470,19 @@ header nav ul li a {
 	margin-bottom: 30px;
 }
 
-.index-body .wrapper .artist .about-them .info .pricing h2 {
+.index-body .wrapper .artist .info .pricing h2 {
 	font-weight: normal;
 	padding-bottom: 10px;
 }
 
-.index-body .wrapper .artist .about-them .info .book {
+.index-body .wrapper .artist .info .book {
 	padding: 10px;
 	background: rgba(185, 185, 185, 0.6);
 	color: #fff;
 }
 
 @media screen and (min-width: 768px) {
-	.index-body .wrapper .artist .about-them {
+	.index-body .wrapper .artist {
 		flex-direction: row;
 		max-width: 100%;
 	}
@@ -474,6 +501,7 @@ header nav ul li a {
 
 .work-body .background-holder.footer {
 	background-position-y: 18%;
+	background: rgba(0, 0, 0, 0.6);
 }
 
 .work-body .gallery {
@@ -515,48 +543,147 @@ header nav ul li a {
 .booking-body .booking form {
 	background: rgba(0, 0, 0, 0.6);
 	box-shadow: 0px 0px 40px 45px rgba(160, 160, 160, 0.7);
-	padding: 30px;
+	margin: 5%;
 }
 
-.booking-body .booking h2 {
-	padding-bottom: 30px;
+.booking-body .booking #name-please {
+	border: 2px white solid;
 }
 
-.booking-body .booking fieldset {
-	padding: 10px 0;
+.booking-body .booking #name-please h2 {
+	border: 2px white solid;
+	font-size: 2.5rem;
+	width: 52%;
 }
 
-.booking-body .booking fieldset legend {
-	font-weight: bold;
+.booking-body .booking #name-please h3 {
+	padding: 3%;
+	font-size: 1rem;
 }
 
-.booking-body .booking fieldset label {
+.booking-body .booking #name-please .full-name-container {
+	display: flex;
+	width: 100%;
+}
+
+.booking-body .booking #name-please .full-name-container .name-container {
+	display: flex;
+	width: 50%;
+	padding: 0 3%;
+}
+
+.booking-body .booking #name-please .full-name-container .name-container label {
 	padding-bottom: 10px;
+	width: 20%;
 }
 
-.booking-body .booking fieldset.booking-date {
-	display: flex;
-	flex-direction: column;
-}
-
-.booking-body .booking fieldset#name-please .full-name-container {
-	display: flex;
-	flex-direction: column;
-}
-
-.booking-body .booking fieldset#name-please .full-name-container .name-container {
-	display: flex;
-	align-items: center;
-}
-
-.booking-body .booking fieldset#name-please .full-name-container .name-container label {
-	padding-bottom: 10px;
-	width: 30%;
-}
-
-.booking-body .booking fieldset#name-please .full-name-container .name-container input {
+.booking-body .booking #name-please .full-name-container .name-container input {
 	padding-left: 5px;
 	margin-bottom: 10px;
+	margin-left: 2%;
+}
+
+.booking-body .booking .birthday {
+	display: flex;
+	width: 100%;
+	border: 2px white solid;
+}
+
+.booking-body .booking .birthday #radio {
+	width: 50%;
+	border-right: 2px white solid;
+	padding: 3%;
+}
+
+.booking-body .booking .birthday #radio h3 {
+	width: 100%;
+	margin-bottom: 5%;
+}
+
+.booking-body .booking .birthday #birthday-please {
+	padding: 3%;
+	width: 50%;
+}
+
+.booking-body .booking .birthday #birthday-please h3 {
+	margin-bottom: 5%;
+}
+
+.booking-body .booking .birthday #birthday-please .select {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	margin-bottom: 5%;
+}
+
+.booking-body .booking .birthday #birthday-please .select.day label {
+	margin-right: 40.5%;
+}
+
+.booking-body .booking .birthday #birthday-please .select.month label {
+	margin-right: 30%;
+}
+
+.booking-body .booking .birthday #birthday-please .select.year label {
+	margin-right: 38.9%;
+}
+
+.booking-body .booking .concept {
+	border: white 2px solid;
+	padding: 3%;
+}
+
+.booking-body .booking .concept h3 {
+	margin-bottom: 5%;
+}
+
+.booking-body .booking .last-panel {
+	display: flex;
+	flex-direction: column;
+	border: 2px solid white;
+}
+
+.booking-body .booking .last-panel .email-date {
+	display: flex;
+}
+
+.booking-body .booking .last-panel .email-date .email {
+	width: 35%;
+	border-right: 1px solid white;
+	display: flex;
+	flex-direction: column;
+	padding: 3%;
+}
+
+.booking-body .booking .last-panel .email-date .email label {
+	margin-bottom: 20%;
+}
+
+.booking-body .booking .last-panel .email-date .submit {
+	display: flex;
+	flex-direction: column;
+}
+
+.booking-body .booking .last-panel .email-date .submit .booking-date {
+	width: 100%;
+	border-left: 1px solid white;
+	display: flex;
+	flex-direction: column;
+	padding: 3%;
+}
+
+.booking-body .booking .last-panel .email-date .submit .booking-date label {
+	margin-bottom: 5%;
+}
+
+.booking-body .booking .last-panel .email-date .submit button {
+	width: 50%;
+	height: 40px;
+	margin-left: 50%;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-top: 2px white solid;
+	border-left: 2px white solid;
 }
 
 /*# sourceMappingURL=main.css.map */

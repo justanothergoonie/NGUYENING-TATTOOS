@@ -6,27 +6,20 @@
 		background: rgba(0, 0, 0, 0.6);
 		color: #fff;
 		.artist {
-			@include flex-center;
+			display: flex;
+			align-items: center;
 			flex-direction: column;
 			padding: $small-spacing;
-			// padding: 20px;
 
-			.about-them {
-				// @include flex-center;
-				display: flex;
-				flex-direction: column;
-				text-align: center;
-				text-shadow: -2px -2px 0px #000000;
-				// max-width: 75%;
-				padding: $small-spacing;
-				.dan3,
-				.dan2 {
-					display: none;
-					@include bp-med {
-						display: block;
-					}
-				}
+			text-align: center;
+			text-shadow: -2px -2px 0px #000000;
+			@include bp-large {
+				flex-direction: row;
+				margin: 10% 2%;
+			}
 
+			padding: $small-spacing;
+			.img-container {
 				.dan1,
 				.dan2,
 				.dan3 {
@@ -36,41 +29,63 @@
 						margin-right: $large-spacing;
 					}
 				}
-				.info {
+				.dan2,
+				.dan3 {
+					display: none;
+					@include bp-med {
+						display: block;
+					}
+				}
+				@include bp-large {
 					display: flex;
-					justify-content: space-evenly;
-					flex-direction: column;
+					width: 60%;
+					justify-content: space-around;
+					.dan2 {
+						display: none;
+					}
+					.dan1,
+					.dan3 {
+						width: 45%;
+					}
+				}
+			}
 
+			.info {
+				display: flex;
+				justify-content: space-evenly;
+				flex-direction: column;
+				@include bp-large {
+					width: 40%;
+				}
+				h2 {
+					padding-bottom: $small-spacing;
+				}
+				.sponsor {
+					@include flex-center;
+					flex-direction: column;
+					margin: $large-spacing 0;
 					h2 {
 						padding-bottom: $small-spacing;
 					}
-					.sponsor {
-						@include flex-center;
-						flex-direction: column;
-						margin: $large-spacing 0;
-						h2 {
-							padding-bottom: $small-spacing;
-						}
-					}
-					.pricing {
-						@include flex-center;
-						flex-direction: column;
-						margin-bottom: $large-spacing;
-						h2 {
-							font-weight: normal;
-							padding-bottom: $small-spacing;
-						}
-					}
-					.book {
-						padding: $small-spacing;
-						background: rgba(185, 185, 185, 0.6);
-						color: #fff;
+				}
+				.pricing {
+					@include flex-center;
+					flex-direction: column;
+					margin-bottom: $large-spacing;
+					h2 {
+						font-weight: normal;
+						padding-bottom: $small-spacing;
 					}
 				}
-				@include bp-med {
-					flex-direction: row;
-					max-width: 100%;
+				.book {
+					padding: $small-spacing;
+					background: rgba(185, 185, 185, 0.6);
+					color: #fff;
 				}
+			}
+			@include bp-med {
+				flex-direction: row;
+				max-width: 100%;
 			}
 		}
 	}
@@ -87,6 +102,7 @@
 		}
 		&.footer {
 			background-position-y: 18%;
+			background: rgba(0, 0, 0, 0.6);
 		}
 	}
 	.gallery {
@@ -120,45 +136,150 @@
 			background: rgba(0, 0, 0, 0.6);
 			-webkit-box-shadow: -30px 20px 7px 0px rgba(160, 160, 160, 0.7);
 			box-shadow: 0px 0px 40px 45px rgba(160, 160, 160, 0.7);
-			padding: $large-spacing;
+			margin: 5%;
+			// @include bp-med {
+			// 	padding: 5%;
+			// }
 		}
-		h2 {
-			padding-bottom: $large-spacing;
-		}
-
-		fieldset {
-			legend {
-				font-weight: bold;
+		#name-please {
+			border: 2px white solid;
+			h2 {
+				border: 2px white solid;
+				font-size: 2.5rem;
+				width: 52%;
 			}
-			padding: $small-spacing 0;
-			label {
-				padding-bottom: $small-spacing;
+			h3 {
+				padding: 3%;
+				font-size: 1rem;
 			}
-			&.booking-date {
+			.full-name-container {
 				display: flex;
-				flex-direction: column;
-			}
-			&#name-please {
-				.full-name-container {
+				width: 100%;
+				.name-container {
 					display: flex;
-					flex-direction: column;
-					// align-content: center;
-					.name-container {
-						display: flex;
-						align-items: center;
-						// flex-direction: row;
-						// margin-bottom: 5px;
+					width: 50%;
+					padding: 0 3%;
+					// align-items: center;
+					// flex-direction: row;
+					// margin-bottom: 5px;
+					label {
+						padding-bottom: 10px;
+						width: 20%;
+					}
+					input {
+						padding-left: 5px;
+						margin-bottom: 10px;
+						margin-left: 2%;
+					}
+				}
+			}
+		}
+		.birthday {
+			display: flex;
+			width: 100%;
+			border: 2px white solid;
+			#radio {
+				width: 50%;
+				border-right: 2px white solid;
+				padding: 3%;
+				h3 {
+					width: 100%;
+					margin-bottom: 5%;
+				}
+				// .yes-no {
+				// 	@include flex-center;
+				// }
+			}
+			#birthday-please {
+				padding: 3%;
+				width: 50%;
+				h3 {
+					margin-bottom: 5%;
+				}
+				.select {
+					display: flex;
+					align-content: center;
+					align-items: center;
+					margin-bottom: 5%;
+					&.day {
 						label {
-							padding-bottom: 10px;
-							width: 30%;
+							margin-right: 40.5%;
 						}
-						input {
-							padding-left: 5px;
-							margin-bottom: 10px;
+					}
+					&.month {
+						label {
+							margin-right: 30%;
+						}
+					}
+					&.year {
+						label {
+							margin-right: 38.9%;
 						}
 					}
 				}
 			}
 		}
+		.concept {
+			border: white 2px solid;
+			padding: 3%;
+			h3 {
+				margin-bottom: 5%;
+			}
+		}
+		.last-panel {
+			display: flex;
+			flex-direction: column;
+			border: 2px solid white;
+			.email-date {
+				display: flex;
+
+				.email {
+					width: 35%;
+					border-right: 1px solid white;
+					display: flex;
+					flex-direction: column;
+					padding: 3%;
+					label {
+						margin-bottom: 20%;
+					}
+				}
+				.submit {
+					display: flex;
+					flex-direction: column;
+					.booking-date {
+						width: 100%;
+						border-left: 1px solid white;
+						display: flex;
+						flex-direction: column;
+						padding: 3%;
+						label {
+							margin-bottom: 5%;
+						}
+					}
+					button {
+						width: 50%;
+						height: 40px;
+						margin-left: 50%;
+						color: #fff;
+						background-color: rgba(0, 0, 0, 0.3);
+						border-top: 2px white solid;
+						border-left: 2px white solid;
+					}
+				}
+			}
+		}
+		// fieldset {
+		// 	legend {
+		// 		font-weight: bold;
+		// 	}
+		// 	// padding: $small-spacing 0;
+		// 	// label {
+		// 	// 	padding-bottom: $small-spacing;
+		// 	// }
+		// 	&.booking-date {
+		// 		display: flex;
+		// 		flex-direction: column;
+		// 	}
+		// }
 	}
 }

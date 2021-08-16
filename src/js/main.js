@@ -11,9 +11,9 @@ const radioBtns = document.querySelectorAll('input[type="radio"]');
 for (const button of radioBtns) {
 	button.addEventListener('click', function () {
 		if (this.value === 'no') {
-			birthday.style.display = 'none';
+			birthday.style.visibility = 'hidden';
 		} else {
-			birthday.style.display = '';
+			birthday.style.visibility = '';
 		}
 	});
 }
